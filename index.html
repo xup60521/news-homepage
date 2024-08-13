@@ -10,11 +10,135 @@
 </head>
 
 <body>
-    <main
-        class="w-full min-h-screen bg-gradient-to-r from-fuchsia-500 to-cyan-500 flex items-center justify-center">
-        <h1 class="font-mono font-bold text-3xl text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
-            Vite + Typescript + TailwindCSS + GitHub Pages
-        </h1>
+    <main>
+        <div id="mobile-nav"
+            class="fixed lg:hidden h-screen bg-white flex flex-col w-[66vw] right-0 top-0 transition z-10"
+            style="display: none;">
+            <div class="flex justify-end py-8 px-6">
+                <img src="/images/icon-menu-close.svg" alt="close icon" id="close-menu-btn" role="button"
+                    class="cursor-pointer" />
+            </div>
+            <div class="flex flex-col gap-6 px-6 pt-[5vh]">
+                <button class="font-inter text-lg font-medium transition hover:text-c_Soft_red w-fit">Home</button>
+                <button class="font-inter text-lg font-medium transition hover:text-c_Soft_red w-fit">New</button>
+                <button class="font-inter text-lg font-medium transition hover:text-c_Soft_red w-fit">Popular</button>
+                <button class="font-inter text-lg font-medium transition hover:text-c_Soft_red w-fit">Trending</button>
+                <button
+                    class="font-inter text-lg font-medium transition hover:text-c_Soft_red w-fit">Categories</button>
+            </div>
+        </div>
+        <div id="page" class="w-full transition min-h-screen flex flex-col items-center bg-c_Off_white px-5">
+            <div class="w-[min(100%,70rem)] flex flex-col pb-16">
+                <nav class="flex items-center justify-between lg:py-12 pt-8 pb-10">
+                    <img src="/images/logo.svg" alt="logo" class="aspect-auto lg:h-9 h-7" />
+                    <img role="button" id="menu" src="/images/icon-menu.svg" alt="icon menu"
+                        class="cursor-pointer lg:hidden" />
+                    <div class="lg:flex hidden items-center gap-10">
+                        <button class="font-inter font-light transition hover:text-c_Soft_red">Home</button>
+                        <button class="font-inter font-light transition hover:text-c_Soft_red">New</button>
+                        <button class="font-inter font-light transition hover:text-c_Soft_red">Popular</button>
+                        <button class="font-inter font-light transition hover:text-c_Soft_red">Trending</button>
+                        <button class="font-inter font-light transition hover:text-c_Soft_red">Categories</button>
+                    </div>
+                </nav>
+                <div class="lg:grid grid-cols-3 flex flex-col gap-8">
+                    <div class="col-span-2 flex flex-col gap-8">
+                        <img src="/images/image-web-3-desktop.jpg" alt="web3 illustration image (desktop)"
+                            class="aspect-[1460/600] lg:block hidden">
+                        <img src="/images/image-web-3-mobile.jpg" alt="web3 illustration image (mobile)"
+                            class="aspect-[686/600] lg:hidden">
+                        <div class="lg:grid grid-cols-2 flex flex-col gap-8">
+                            <h1
+                                class="text-black font-inter lg:text-[3.5rem] text-[2.5rem] font-black lg:leading-[3.5rem] leading-[2.5rem]">
+                                The Bright Future of
+                                Web 3.0?</h1>
+                            <div class="flex flex-col justify-between lg:gap-0 gap-6">
+                                <p class="font-inter text-c_Dark_grayish_blue">
+                                    We dive into the next evolution of the web that claims to put the power of the
+                                    platforms
+                                    back into the hands of the people.
+                                    But is it really fulfilling its promise?
+                                </p>
+                                <button
+                                    class="bg-c_Soft_red transition text-black hover:bg-black hover:text-white w-fit px-7 py-3 font-black text-sm tracking-[0.2rem] font-inter">READ
+                                    MORE</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-black px-6 py-6 flex flex-col justify-between lg:gap-0 gap-6 lg:my-0 my-6">
+                        <span class="lg:text-[2.5rem] text-3xl text-c_Soft_orange font-inter font-bold">New</span>
+
+                        <div class="flex flex-col justify-center">
+                            <h2
+                                class="text-white font-inter font-bold text-xl pb-3 transition cursor-pointer hover:text-c_Soft_orange">
+                                Hydrogen VS Electric Cars</h2>
+                            <p class="font-inter text-c_Grayish_blue text-sm leading-6">Will hydrogen-fueled cars ever
+                                catch up to
+                                EVs?</p>
+                        </div>
+                        <div class="p-1 border-t-[1px] border-c_Grayish_blue">
+
+                        </div>
+                        <div class="flex flex-col justify-center">
+                            <h2
+                                class="text-white font-inter font-bold text-xl pb-3 transition cursor-pointer hover:text-c_Soft_orange">
+                                The Downsides of AI Artistry</h2>
+                            <p class="font-inter text-c_Grayish_blue text-sm leading-6">What are the possible adverse
+                                effects of
+                                on-demand AI image generation?</p>
+                        </div>
+                        <div class="p-1 border-b-[1px] border-c_Grayish_blue"></div>
+                        <div class="flex flex-col justify-center">
+                            <h2
+                                class="text-white font-inter font-bold text-xl pb-3 transition cursor-pointer hover:text-c_Soft_orange">
+                                Is VC Funding Drying Up?</h2>
+                            <p class="font-inter text-c_Grayish_blue text-sm leading-6">Private funding by VC firms is
+                                down 50%
+                                YOY. We take a look at what that means.</p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="lg:grid grid-cols-3 lg:gap-8 gap-6 lg:py-16 py-12 flex flex-col">
+                    <div class="flex">
+                        <img src="/images/image-retro-pcs.jpg" alt="retro image"
+                            class="h-full aspect-[200/254] lg:w-[6.25rem] w-24" />
+                        <div class="flex flex-col justify-between pl-6 pr-4">
+                            <span class="font-inter text-c_Soft_red text-3xl font-bold">01</span>
+                            <h3
+                                class="font-inter font-black lg:text-lg -mt-1 transition cursor-pointer hover:text-c_Soft_red">
+                                Reviving Retro PCs</h3>
+                            <p class="font-inter text-c_Dark_grayish_blue text-sm">What happens when old PCs are given
+                                modern upgrades?</p>
+                        </div>
+                    </div>
+                    <div class="flex">
+                        <img src="/images/image-top-laptops.jpg" alt="keyboard image"
+                            class="h-full aspect-[200/254] lg:w-[6.25rem] w-24" />
+                        <div class="flex flex-col justify-between pl-6 pr-4">
+                            <span class="font-inter text-c_Soft_red text-3xl font-bold">02</span>
+                            <h3
+                                class="font-inter font-black lg:text-lg -mt-1 transition cursor-pointer hover:text-c_Soft_red">
+                                Top 10 Laptops of 2022</h3>
+                            <p class="font-inter text-c_Dark_grayish_blue text-sm">Our best picks for various needs and
+                                budgets.</p>
+                        </div>
+                    </div>
+                    <div class="flex">
+                        <img src="/images/image-gaming-growth.jpg" alt="gaming growth image"
+                            class="h-full aspect-[200/254] lg:w-[6.25rem] w-24" />
+                        <div class="flex flex-col justify-between pl-6 pr-4">
+                            <span class="font-inter text-c_Soft_red text-3xl font-bold">03</span>
+                            <h3
+                                class="font-inter font-black lg:text-lg -mt-1 transition cursor-pointer hover:text-c_Soft_red">
+                                The Growth of Gaming</h3>
+                            <p class="font-inter text-c_Dark_grayish_blue text-sm">How the pandemic has sparked fresh
+                                opportunities.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
     <script type="module" src="/src/main.ts"></script>
 </body>
